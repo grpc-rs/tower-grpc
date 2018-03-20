@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Request` struct in crate `tower_grpc`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Request">
+
+    <title>tower_grpc::Request - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        
+        <p class='location'>Struct Request</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.new">new</a><a href="#method.get_ref">get_ref</a><a href="#method.get_mut">get_mut</a><a href="#method.headers">headers</a><a href="#method.headers_mut">headers_mut</a><a href="#method.into_inner">into_inner</a><a href="#method.from_http">from_http</a><a href="#method.into_http">into_http</a><a href="#method.map">map</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-Debug">Debug</a></div></div><p class='location'><a href='index.html'>tower_grpc</a></p><script>window.sidebarCurrent = {name: 'Request', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>tower_grpc</a>::<wbr><a class="struct" href=''>Request</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/tower_grpc/request.rs.html#4-7' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Request&lt;T&gt; { /* fields omitted */ }</pre>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl&lt;T&gt; <a class="struct" href="../tower_grpc/struct.Request.html" title="struct tower_grpc::Request">Request</a>&lt;T&gt;</code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/tower_grpc/request.rs.html#9-73' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class="method"><span id='new.v' class='invisible'><code>pub fn <a href='#method.new' class='fnname'>new</a>(message: T) -&gt; Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/tower_grpc/request.rs.html#11-16' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Create a new gRPC request</p>
+</div><h4 id='method.get_ref' class="method"><span id='get_ref.v' class='invisible'><code>pub fn <a href='#method.get_ref' class='fnname'>get_ref</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/tower_grpc/request.rs.html#19-21' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Get a reference to the message</p>
+</div><h4 id='method.get_mut' class="method"><span id='get_mut.v' class='invisible'><code>pub fn <a href='#method.get_mut' class='fnname'>get_mut</a>(&amp;mut self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/tower_grpc/request.rs.html#24-26' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Get a mutable reference to the message</p>
+</div><h4 id='method.headers' class="method"><span id='headers.v' class='invisible'><code>pub fn <a href='#method.headers' class='fnname'>headers</a>(&amp;self) -&gt; &amp;<a class="struct" href="../tower_grpc/codegen/server/http/struct.HeaderMap.html" title="struct tower_grpc::codegen::server::http::HeaderMap">HeaderMap</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/tower_grpc/request.rs.html#29-31' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Get a reference to the request headers.</p>
+</div><h4 id='method.headers_mut' class="method"><span id='headers_mut.v' class='invisible'><code>pub fn <a href='#method.headers_mut' class='fnname'>headers_mut</a>(&amp;mut self) -&gt; &amp;mut <a class="struct" href="../tower_grpc/codegen/server/http/struct.HeaderMap.html" title="struct tower_grpc::codegen::server::http::HeaderMap">HeaderMap</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/tower_grpc/request.rs.html#34-36' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Get a mutable reference to the request headers.</p>
+</div><h4 id='method.into_inner' class="method"><span id='into_inner.v' class='invisible'><code>pub fn <a href='#method.into_inner' class='fnname'>into_inner</a>(self) -&gt; T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/tower_grpc/request.rs.html#39-41' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Consumes <code>self</code>, returning the message</p>
+</div><h4 id='method.from_http' class="method"><span id='from_http.v' class='invisible'><code>pub fn <a href='#method.from_http' class='fnname'>from_http</a>(http: <a class="struct" href="../tower_grpc/codegen/server/http/struct.Request.html" title="struct tower_grpc::codegen::server::http::Request">Request</a>&lt;T&gt;) -&gt; Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/tower_grpc/request.rs.html#44-50' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Convert an HTTP request to a gRPC request</p>
+</div><h4 id='method.into_http' class="method"><span id='into_http.v' class='invisible'><code>pub fn <a href='#method.into_http' class='fnname'>into_http</a>(self, uri: <a class="struct" href="../tower_grpc/codegen/client/http/struct.Uri.html" title="struct tower_grpc::codegen::client::http::Uri">Uri</a>) -&gt; <a class="struct" href="../tower_grpc/codegen/server/http/struct.Request.html" title="struct tower_grpc::codegen::server::http::Request">Request</a>&lt;T&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/tower_grpc/request.rs.html#52-61' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.map' class="method"><span id='map.v' class='invisible'><code>pub fn <a href='#method.map' class='fnname'>map</a>&lt;F, U&gt;(self, f: F) -&gt; <a class="struct" href="../tower_grpc/struct.Request.html" title="struct tower_grpc::Request">Request</a>&lt;U&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;F: <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.FnOnce.html" title="trait core::ops::function::FnOnce">FnOnce</a>(T) -&gt; U,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/tower_grpc/request.rs.html#63-72' title='goto source code'>[src]</a></span></h4>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-Debug' class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html" title="trait core::fmt::Debug">Debug</a>&gt; <a class="trait" href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html" title="trait core::fmt::Debug">Debug</a> for <a class="struct" href="../tower_grpc/struct.Request.html" title="struct tower_grpc::Request">Request</a>&lt;T&gt;</code><a href='#impl-Debug' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/tower_grpc/request.rs.html#3' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class="method"><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class="struct" href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html" title="struct core::fmt::Formatter">Formatter</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html" title="type core::fmt::Result">Result</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/tower_grpc/request.rs.html#3' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter. <a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "tower_grpc";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>
